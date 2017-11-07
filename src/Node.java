@@ -55,6 +55,26 @@ public class Node<Key extends Comparable<Key>, Value> {
         this.value = value;
     }
 
+    public boolean isLeaf(Node n){
+        if (n.getRight() != null || n.getLeft() != null){
+            return false;
+        }else{
+            return true;
+        }
+    }
+
+    public int compareTo(Node n, Node o){
+        if (n.getKey().compareTo(o.getKey()) > 0) {
+            return 1;
+        }
+            else if(n.getKey().compareTo(o.getKey()) < 0) {
+            return -1;
+
+        }else {
+            return 0;
+        }
+    }
+
     @Override
     public String toString(){
         String pho;
