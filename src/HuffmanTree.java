@@ -6,10 +6,22 @@ import java.util.ArrayList;
 
 public class  HuffmanTree {
     private
-    HuffmanTree(String a){
-       ArrayList chars = new ArrayList();
-       ArrayList count = new ArrayList();
+    HuffmanTree(String a) {
+        ArrayList chars = new ArrayList();
+        ArrayList <Integer> count = new ArrayList();
         int counter = 0;
+
+
+        for (int i = 0; i < a.length() - 1; i++) {
+
+            if (chars.contains(a.charAt(i))){
+                int loc =  chars.indexOf(a.charAt(i));
+                count.set(loc , count.get(loc)+1);
+            }else {
+                chars.add(a.charAt(i));
+                count.add(1);
+            }
+
         for (int i = 0; i <a.length()-1 ; i++) {
             if (!(chars.contains(a.charAt(i)))) {
                 chars.add(a.charAt(i));
@@ -24,6 +36,8 @@ public class  HuffmanTree {
 
         }
 
+
+        }
     }
 
 
