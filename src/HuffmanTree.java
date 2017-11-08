@@ -1,16 +1,21 @@
+import java.util.ArrayList;
+
 /**
  * Created by jhascall19 on 11/7/17.
  */
-public class HuffmanTree {
 
-    public HuffmanTree(){
+public class  HuffmanTree {
+    private
+    HuffmanTree(String a){
+       ArrayList chars = new ArrayList();
+       ArrayList count = new ArrayList();
 
-    }
-
-    public boolean isLeaf(){
-        boolean t = false;
-        return t;
+        for (int i = 0; i <a.length()-1 ; i++) {
+            chars.add(a.charAt(i));
+            
+        }
     }
 
 
 }
+
