@@ -13,18 +13,13 @@ public class  HuffmanTree {
 
         for (int i = 0; i <a.length()-1 ; i++) {
             chars.add(a.charAt(i));
-
-
             for (int q = 0; q < a.length()-1 ; q++) {
                 if ((char)chars.get(i) == a.charAt(q)){
                     counter ++;
                 }
-
             }
         count.add(counter);
             counter = 0;
-
-
         }
 
     }
