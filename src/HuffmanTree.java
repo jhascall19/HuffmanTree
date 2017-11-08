@@ -7,26 +7,12 @@ import java.util.ArrayList;
 public class  HuffmanTree {
     private
     HuffmanTree(String a){
-        ArrayList cars= new ArrayList();
-        ArrayList target = new ArrayList();
-        for (int i = 0; i < a.length(); i++) {
-            cars.add(a.charAt(i));
-        }
-        target.add(cars.get(0));
-        int counter=0;
-        int length = cars.size();
+       ArrayList chars = new ArrayList();
+       ArrayList count = new ArrayList();
 
-        for (int i = 0; i <cars.size() ; i++) {
-
-            if (cars.get(i).equals(target)){
-                cars.remove(i);
-                counter++;
-            }else {
-                target = (char) cars.get(i);
-
-            }
-
-
+        for (int i = 0; i <a.length()-1 ; i++) {
+            chars.add(a.charAt(i));
+            
         }
     }
 
