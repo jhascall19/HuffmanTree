@@ -10,6 +10,7 @@ public class  HuffmanTree {
        ArrayList chars = new ArrayList();
        ArrayList count = new ArrayList();
         int counter = 0;
+        //loops to make list of
         for (int i = 0; i <a.length()-1 ; i++) {
             if (!(chars.contains(a.charAt(i)))) {
                 chars.add(a.charAt(i));
@@ -23,6 +24,7 @@ public class  HuffmanTree {
             counter = 0;
 
         }
+
 
     }
 
