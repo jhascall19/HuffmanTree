@@ -55,8 +55,8 @@ public class Node<Key extends Comparable<Key>, Value> {
         this.value = value;
     }
 
-    public boolean isLeaf(Node n){
-        if (n.getRight() != null || n.getLeft() != null){
+    public boolean isLeaf(){
+        if (getRight() != null || getLeft() != null){
             return false;
         }else{
             return true;
