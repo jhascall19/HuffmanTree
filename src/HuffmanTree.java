@@ -23,9 +23,14 @@ public class  HuffmanTree  {
         }
         Node n;
         PriorityQueue queue = new PriorityQueue();
+
         for (int i = 0; i <chars.size() ; i++) {
          n = new Node<Integer, Character>(count.get(i),(Character)chars.get(i));
          queue.add(n);
+
+
+        }
+        for (int q = 0; q < queue.size(); q++) {
 
         }
 
