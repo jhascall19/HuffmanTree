@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.PriorityQueue;
 
 /**
  * Created by jhascall19 on 11/7/17.
@@ -18,9 +19,14 @@ public class  HuffmanTree {
                 count.add(1);
             }
         }
+        Node n;
+        PriorityQueue queue = new PriorityQueue();
+        for (int i = 0; i <chars.size() ; i++) {
 
-        
-    }
+        }
+
+
+                         }
 
 
 }
