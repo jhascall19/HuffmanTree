@@ -12,10 +12,10 @@ public class Node<Key extends Comparable<Key>, Value> {
         this.value = value;
 
     }
-    public Node(Comparable k, Value v, int size){
+    public Node(Comparable k, Value v){
         this.key = (Comparable) k;
         this.value = (Comparable) v;
-        this.size = size;
+
 
     }
 

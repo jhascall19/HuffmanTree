@@ -1,3 +1,5 @@
+import sun.awt.SunHints;
+
 import java.util.ArrayList;
 import java.util.PriorityQueue;
 
@@ -5,7 +7,7 @@ import java.util.PriorityQueue;
  * Created by jhascall19 on 11/7/17.
  */
 
-public class  HuffmanTree {
+public class  HuffmanTree  {
     HuffmanTree(String a) {
         ArrayList chars = new ArrayList();
         ArrayList<Integer> count = new ArrayList();
@@ -22,6 +24,8 @@ public class  HuffmanTree {
         Node n;
         PriorityQueue queue = new PriorityQueue();
         for (int i = 0; i <chars.size() ; i++) {
+         n = new Node<Integer, Character>(count.get(i),(Character)chars.get(i));
+         queue.add(n);
 
         }
 
