@@ -2,6 +2,7 @@ import sun.awt.SunHints;
 
 import java.util.ArrayList;
 import java.util.PriorityQueue;
+import java.util.Queue;
 
 /**
  * Created by jhascall19 on 11/7/17.
@@ -25,16 +26,28 @@ public class  HuffmanTree  {
         }
         // Priority Queue (lines 27-31)
         Node n;
-        PriorityQueue queue = new PriorityQueue();
+        PriorityQueue<Node> queue = new PriorityQueue();
 
         for (int i = 0; i <chars.size() ; i++) {
          n = new Node<Integer, Character>(count.get(i),(Character)chars.get(i));
          queue.add(n);
         }
         // feeding priority queue into tree format (Lines 33- )
-        for (int q = 0; q < queue.size(); q++) {
 
+        if (!queue.isEmpty()){
+            while (queue.size() > 1){
+                Node left = queue.poll();
+                Node right = queue.poll();
+
+                Node root = new Node((int)right.getKey() +(int) left.getKey(),"*");
+                root.setLeft(left);
+                root.setRight(right);
+                queue.add(root);
+
+            }
+            Node top = queue.poll();
         }
+        
 
 
     }
