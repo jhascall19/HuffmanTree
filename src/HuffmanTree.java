@@ -9,6 +9,7 @@ import java.util.Queue;
  */
 
 public class  HuffmanTree  {
+    Node top;
     HuffmanTree(String a) {
 
         // making 2 parrallel arraylists that contain # time appeared and character (Lines 14-25)
@@ -34,20 +35,36 @@ public class  HuffmanTree  {
         }
         // feeding priority queue into tree format (Lines 33- )
 
-        if (!queue.isEmpty()){
-            while (queue.size() > 1){
+        if (!queue.isEmpty()) {
+            while (queue.size() > 1) {
                 Node left = queue.poll();
                 Node right = queue.poll();
 
-                Node root = new Node((int)right.getKey() +(int) left.getKey(),"*");
+                Node root = new Node((int) right.getKey() + (int) left.getKey(), "*");
                 root.setLeft(left);
                 root.setRight(right);
                 queue.add(root);
 
             }
-            Node top = queue.poll();
+
+         }
+         top = queue.poll();
         }
-        
+        public String toString(){
+              String  stringOut = toString(top);
+            return stringOut;
+        }
+        private String toString(Node n) {
+            String rec = "";
+            if (n == null) {
+                return rec;
+            } else if (n.isLeaf(n)) {
+                rec += "1";
+                rec += n.getValue().
+            }
+
+        }
+
 
 
     }
