@@ -26,7 +26,7 @@ public class  HuffmanTree  {
         }
         // Priority Queue (lines 27-31)
         Node n;
-        PriorityQueue<Node> queue = new PriorityQueue();
+        PriorityQueue queue = new PriorityQueue();
 
         for (int i = 0; i <chars.size() ; i++) {
          n = new Node<Integer, Character>(count.get(i),(Character)chars.get(i));
@@ -36,8 +36,8 @@ public class  HuffmanTree  {
 
         if (!queue.isEmpty()) {
             while (queue.size() > 1) {
-                Node left = queue.poll();
-                Node right = queue.poll();
+                Node left =(Node) queue.poll();
+                Node right =(Node) queue.poll();
 
                 Node root = new Node((int) right.getKey() + (int) left.getKey(), "*");
                 root.setLeft(left);
@@ -47,7 +47,7 @@ public class  HuffmanTree  {
             }
 
          }
-         top = queue.poll();
+         top = (Node)queue.poll();
         }
         // To String public (Lines 54-57)
         public String toString(){
