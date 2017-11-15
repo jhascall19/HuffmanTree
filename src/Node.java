@@ -36,7 +36,7 @@ public class Node<Key extends Comparable<Key>, Value> {
     }
 
     public void setLeft(Node left) {
-        this.left = left;
+         this.left = left;
     }
 
     public void setRight(Node right) {

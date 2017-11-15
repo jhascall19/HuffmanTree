@@ -1,4 +1,3 @@
-import sun.awt.SunHints;
 
 import java.util.ArrayList;
 import java.util.PriorityQueue;
@@ -9,7 +8,7 @@ import java.util.Queue;
  */
 
 public class  HuffmanTree  {
-    Node top;
+   private  Node top;
     HuffmanTree(String a) {
 
         // making 2 parrallel arraylists that contain # time appeared and character (Lines 14-25)
@@ -33,7 +32,7 @@ public class  HuffmanTree  {
          n = new Node<Integer, Character>(count.get(i),(Character)chars.get(i));
          queue.add(n);
         }
-        // feeding priority queue into tree format (Lines 33- )
+        // feeding priority queue into tree format (Lines 33- 51 )
 
         if (!queue.isEmpty()) {
             while (queue.size() > 1) {
@@ -50,25 +49,41 @@ public class  HuffmanTree  {
          }
          top = queue.poll();
         }
+        // To String public (Lines 54-57)
         public String toString(){
               String  stringOut = toString(top);
             return stringOut;
         }
+        // to string recursive (Lines 58-73)
         private String toString(Node n) {
             String rec = "";
             if (n == null) {
                 return rec;
-            } else if (n.isLeaf(n)) {
+            } else if (n.isLeaf()) {
                 rec += "1";
-                rec += n.getValue().
-            }
+                int charNum = (int)top.getValue().toString().charAt(0);
+                rec += Integer.toBinaryString(charNum);
+            }else {
+                rec += 0;
+                rec += toString(top.getLeft());
+                rec += toString(top.getRight());
 
+            }
+            return rec;
         }
 
-
+    public static void main(String[] args) {
+            String strang = "The dog gandered at the ganderer";
+            HuffmanTree h = new HuffmanTree(strang);
+        System.out.println("Huffman code: " + h.toString());
+        System.out.print("Original Code: " );
+        for (int i = 0; i < strang.length(); i++) {
+            System.out.print(Integer.toBinaryString(strang.charAt(i)));
+        }
 
     }
 
 
-}
+    }
+
 
